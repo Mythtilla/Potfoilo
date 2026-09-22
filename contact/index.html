@@ -22,6 +22,33 @@
   <link rel="preload" href="../assets/fonts/SpaceGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/IBMPlexMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- unknown-route guard: hosts with SPA-style fallback otherwise serve
+       the homepage at any missing path. Inline so it works even where
+       external assets cannot resolve. -->
+  <script>
+    (function () {
+      var p = location.pathname;
+      if (location.protocol === 'file:') return;
+      var known = ['/', '/index.html', '/thinking/', '/thinking/index.html',
+        '/builds/', '/builds/index.html', '/builds/off/', '/builds/off/index.html',
+        '/builds/mythos/', '/builds/mythos/index.html', '/experiments/', '/experiments/index.html',
+        '/about/', '/about/index.html', '/contact/', '/contact/index.html', '/404.html'];
+      var assets = ['/assets/', '/css/', '/js/'];
+      var statics = ['/favicon.svg', '/manifest.webmanifest', '/robots.txt', '/sitemap.xml'];
+      function ok() {
+        if (known.indexOf(p) !== -1) return true;
+        for (var i = 0; i < assets.length; i++) if (p.indexOf(assets[i]) === 0) return true;
+        for (var i = 0; i < statics.length; i++) if (p === statics[i]) return true;
+        return false;
+      }
+      if (!ok()) {
+        try { history.replaceState(null, '', p); } catch (e) {}
+        location.replace('/404.html');
+      }
+    })();
+  </script>
+
   <script src="../js/loader.js" defer></script>
 </head>
 <body class="page-contact">

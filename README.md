@@ -28,6 +28,31 @@ then open http://localhost:8080
 
 Every link is relative, so the site also works from `file://` if you prefer.
 
+## Deploy
+
+Live at https://bhaskarz.antideploy.com (static deploy). Redeploy with one
+command run from this folder (reads `~/.antideploy/config.json`):
+
+```
+tar czf - --exclude=.git --exclude=node_modules . | \
+  curl -X POST "https://antideploy.com/api/v1/deploy?applicationId=$APP_ID" \
+    -H "Authorization: Bearer $TOKEN" \
+    -F "archive=@-"
+```
+
+`APP_ID` is in `.antideploy.json`; `$TOKEN` is the account token in
+`~/.antideploy/config.json`. Poll the returned `watch` URL until it says
+`succeeded`.
+
+## Not-found & loading
+
+- `404.html` — custom "waystation is empty" page, sent at `/?antideploy`-style
+  unknown paths by an inline route guard (each page carries it in `<head>`,
+  so it runs even where external assets can't resolve).
+- A brief loading page (`BHASKAR.` wordmark + a sweeping line) covers first
+  paint on cold visits, then releases. It shows once per session, is skipped
+  under `prefers-reduced-motion`, and never blocks pages without JS.
+
 ## Editing content
 
 - **Projects** — `js/data/projects.js`. Add a new project by appending one

@@ -115,7 +115,6 @@
 
   ready(function () {
     global.document.documentElement.classList.remove('no-js');
-
     if (global.BH.sound) global.BH.sound.wire();
     if (global.BH.transitions) global.BH.transitions.init();
     renderProjectRows();
