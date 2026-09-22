@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-base="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EXPERIMENTS — BHASKAR</title>
+  <meta name="description" content="A small laboratory: tiny web experiments, systems questions, failed ideas, and things made just to understand something.">
+  <link rel="canonical" href="/experiments/">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta name="theme-color" content="#0a0a0b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BHASKAR">
+  <meta property="og:title" content="EXPERIMENTS — BHASKAR">
+  <meta property="og:description" content="A small laboratory: tiny web experiments, systems questions, and things made to understand something.">
+  <meta property="og:url" content="/experiments/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="EXPERIMENTS — BHASKAR">
+  <meta name="twitter:description" content="A small laboratory. Things made to understand something.">
+
+  <link rel="preload" href="../assets/fonts/SpaceGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/IBMPlexMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/loader.js" defer></script>
+</head>
+<body class="page-experiments">
+  <div class="loader" role="status" aria-label="Loading">
+    <div class="loader-inner">
+      <span class="loader-word">BHASKAR<span class="dot" aria-hidden="true">.</span></span>
+      <span class="loader-line" aria-hidden="true"></span>
+      <span class="loader-caption mono">LOADING<span class="cursor" aria-hidden="true">_</span></span>
+    </div>
+  </div>
+
+
+  <div class="page-shade" aria-hidden="true"></div>
+
+  <header class="site-head wrap">
+    <a class="wordmark" href="../index.html" aria-label="BHASKAR — back to the top">
+      BHASKAR<span class="dot" aria-hidden="true"></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../thinking/index.html">Thinking</a>
+      <a href="../builds/index.html">Builds</a>
+      <a href="../experiments/index.html" aria-current="page">Experiments</a>
+      <a href="../about/index.html">About</a>
+      <a href="../contact/index.html">Contact</a>
+      <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false" aria-label="Toggle sound">
+        <span class="led" aria-hidden="true"></span><span data-sound-label>SOUND OFF</span>
+      </button>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menuPanel">MENU</button>
+  </header>
+
+  <div class="menu-panel" id="menuPanel" aria-hidden="true">
+    <a href="../index.html"><span class="n">00</span>Home</a>
+    <a href="../thinking/index.html"><span class="n">01</span>Thinking</a>
+    <a href="../builds/index.html"><span class="n">02</span>Builds</a>
+    <a href="../experiments/index.html"><span class="n">03</span>Experiments</a>
+    <a href="../about/index.html"><span class="n">04</span>About</a>
+    <a href="../contact/index.html"><span class="n">05</span>Contact</a>
+    <div class="menu-foot caps">BHASKAR · MMXXVI</div>
+  </div>
+
+  <main id="main">
+    <section class="exp-hero wrap" aria-labelledby="exp-title">
+      <div class="home-meta">
+        <span class="caps caps--silver">The lab</span>
+        <span class="caps caps--dim">Some run, some sleep</span>
+      </div>
+
+      <h1 id="exp-title" class="page-title">EXPERI<span class="num">/MENTS</span></h1>
+
+      <div class="lede-block" data-reveal>
+        <p>
+          Things made to find something out. A few live on this site; most live
+          in my notes. They are allowed to be unfinished, weird, or wrong.
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap hair" aria-hidden="true"></div>
+
+    <section class="exp-intro wrap" data-reveal>
+      <p>
+        + live &nbsp;* drafting &nbsp;~ ongoing &nbsp;. shelved &nbsp;x failed.
+        Nothing here claims to have caused a breakthrough. Every entry exists
+        because asking about it was worth something.
+      </p>
+    </section>
+
+    <section class="exp-list wrap" aria-label="Experiments">
+      <div class="exp-item" data-reveal>
+        <span class="glyph" aria-hidden="true">+</span>
+        <span class="id mono">#001</span>
+        <div class="what">
+          <h3>ASCII field</h3>
+          <p>The portrait on the front page. Luminance sampled from a photograph, mapped to characters on a canvas, drawn in slowly shifting strips. The field is the method; the page is the field.</p>
+        </div>
+        <span class="status status--live">Running</span>
+        <div class="tags"><span><b>Canvas</b></span><span><b>No DOM text</b></span><span><b>Adaptive density</b></span></div>
+      </div>
+
+      <div class="exp-item" data-reveal>
+        <span class="glyph" aria-hidden="true">+</span>
+        <span class="id mono">#002</span>
+        <div class="what">
+          <h3>The wave</h3>
+          <p>A single silver line moving through darkness. No library — just requestAnimationFrame and an SVG path rebuilt each frame, paused when offscreen.</p>
+        </div>
+        <span class="status status--live">Running</span>
+        <div class="tags"><span><b>SVG</b></span><span><b>rAF</b></span><span><b>IntersectionObserver</b></span></div>
+      </div>
+
+      <div class="exp-item" data-reveal>
+        <span class="glyph" aria-hidden="true">~</span>
+        <span class="id mono">#003</span>
+        <div class="what">
+          <h3>Soft reboot</h3>
+          <p>A test of what a quiet default looks like: no analytics, no tracking, no autoplay sound, no begging for attention. This site is the experiment.</p>
+        </div>
+        <span class="status status--live">Ongoing</span>
+        <div class="tags"><span><b>Defaults</b></span><span><b>Restraint</b></span></div>
+      </div>
+
+      <div class="exp-item" data-reveal>
+        <span class="glyph" aria-hidden="true">*</span>
+        <span class="id mono">#004</span>
+        <div class="what">
+          <h3>Prompts as tools</h3>
+          <p>Treating a prompt as an engineering input — constraints, precision, versioning. Learned the output is only as honest as the edges drawn around it. Notes kept; still drafting the ones that work.</p>
+        </div>
+        <span class="status status--idle">Draft</span>
+        <div class="tags"><span><b>Language</b></span><span><b>Process</b></span></div>
+      </div>
+
+      <div class="exp-item" data-reveal>
+        <span class="glyph" aria-hidden="true">~</span>
+        <span class="id mono">#005</span>
+        <div class="what">
+          <h3>Linux side rooms</h3>
+          <p>A growing interest in systems without the cruft — small machines, terminals, configs where everything visible is there on purpose. Where the machine answers directly.</p>
+        </div>
+        <span class="status status--live">Ongoing</span>
+        <div class="tags"><span><b>Linux</b></span><span><b>Minimal</b></span></div>
+      </div>
+
+      <div class="exp-item" data-reveal>
+        <span class="glyph" aria-hidden="true">~</span>
+        <span class="id mono">#006</span>
+        <div class="what">
+          <h3>First words in Japanese</h3>
+          <p>Learning a language is the most honest systems project there is: every new word is a component shipped without compatibility docs. Still near the start, on purpose.</p>
+        </div>
+        <span class="status status--live">Ongoing</span>
+        <div class="tags"><span><b>Language</b></span><span><b>Slowly</b></span></div>
+      </div>
+
+      <div class="exp-item" data-reveal>
+        <span class="glyph" aria-hidden="true">.</span>
+        <span class="id mono">#007</span>
+        <div class="what">
+          <h3>The dead file</h3>
+          <p>A folder of projects that went nowhere. Kept on purpose — the curve of a dead idea is usually where the lesson was hiding.</p>
+        </div>
+        <span class="status status--idle">Shelved</span>
+        <div class="tags"><span><b>Archive</b></span><span><b>Failure ok</b></span></div>
+      </div>
+
+      <div class="exp-item" data-reveal>
+        <span class="glyph" aria-hidden="true">*</span>
+        <span class="id mono">#008</span>
+        <div class="what">
+          <h3>Someday</h3>
+          <p>An idea shelf — things too young to build and too good to forget. It fills faster than I build, and that is the correct direction.</p>
+        </div>
+        <span class="status status--idle">Draft</span>
+        <div class="tags"><span><b>Queue</b></span><span><b>Ideas</b></span></div>
+      </div>
+    </section>
+
+    <section class="exp-foot wrap" data-reveal>
+      <p>
+        A NOTE ON STATUS: THESE ARE STATES, NOT SCORES. "DRAFT" MEANS UNFINISHED,
+        "SHELVED" MEANS PUT DOWN FOR NOW. FAILURES ARE KEPT BECAUSE FAILURES ARE
+        DATA. THE FOLDER IS OPEN.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-row">
+      <span class="caps">© MMXXVI · BHASKAR</span>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../thinking/index.html">Thinking</a>
+        <a href="../builds/index.html">Builds</a>
+        <a href="../experiments/index.html">Experiments</a>
+        <a href="../about/index.html">About</a>
+        <a href="../contact/index.html">Contact</a>
+      </nav>
+      <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false" aria-label="Toggle sound">
+        <span class="led" aria-hidden="true"></span><span data-sound-label>SOUND OFF</span>
+      </button>
+    </div>
+  </footer>
+
+  <script src="../js/data/projects.js" defer></script>
+  <script src="../js/audio.js" defer></script>
+  <script src="../js/transitions.js" defer></script>
+  <script src="../js/reveal.js" defer></script>
+  <script src="../js/waves.js" defer></script>
+  <script src="../js/portrait.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

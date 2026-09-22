@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-base="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BHASKAR — builder &amp; student</title>
+  <meta name="description" content="The personal digital space of Bhaskar. Thinking in public, quiet experiments, and things built to understand things.">
+  <link rel="canonical" href="/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0a0a0b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BHASKAR">
+  <meta property="og:title" content="BHASKAR">
+  <meta property="og:description" content="Thinking in public, quiet experiments, and things built to understand things.">
+  <meta property="og:url" content="/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BHASKAR">
+  <meta name="twitter:description" content="Thinking in public, quiet experiments, and things built to understand things.">
+
+  <link rel="preload" href="assets/fonts/SpaceGrotesk-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/IBMPlexMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/loader.js" defer></script>
+</head>
+<body class="page-home">
+  <div class="loader" role="status" aria-label="Loading">
+    <div class="loader-inner">
+      <span class="loader-word">BHASKAR<span class="dot" aria-hidden="true">.</span></span>
+      <span class="loader-line" aria-hidden="true"></span>
+      <span class="loader-caption mono">LOADING<span class="cursor" aria-hidden="true">_</span></span>
+    </div>
+  </div>
+
+
+  <div class="page-shade" aria-hidden="true"></div>
+
+  <header class="site-head wrap">
+    <a class="wordmark" href="index.html" aria-label="BHASKAR — back to the top">
+      BHASKAR<span class="dot" aria-hidden="true"></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="thinking/index.html">Thinking</a>
+      <a href="builds/index.html">Builds</a>
+      <a href="experiments/index.html">Experiments</a>
+      <a href="about/index.html">About</a>
+      <a href="contact/index.html">Contact</a>
+      <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false" aria-label="Toggle sound">
+        <span class="led" aria-hidden="true"></span><span data-sound-label>SOUND OFF</span>
+      </button>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menuPanel">MENU</button>
+  </header>
+
+  <div class="menu-panel" id="menuPanel" aria-hidden="true">
+    <a href="index.html"><span class="n">00</span>Home</a>
+    <a href="thinking/index.html"><span class="n">01</span>Thinking</a>
+    <a href="builds/index.html"><span class="n">02</span>Builds</a>
+    <a href="experiments/index.html"><span class="n">03</span>Experiments</a>
+    <a href="about/index.html"><span class="n">04</span>About</a>
+    <a href="contact/index.html"><span class="n">05</span>Contact</a>
+    <div class="menu-foot caps">BHASKAR · MMXXVI</div>
+  </div>
+
+  <main id="main">
+    <section class="home-hero wrap" aria-labelledby="home-title">
+      <div class="home-meta">
+        <span class="caps caps--silver">Personal digital space</span>
+        <span class="caps caps--dim">MMXXVI</span>
+      </div>
+
+      <h1 id="home-title" class="home-title metal">BHASKAR</h1>
+
+      <p class="home-lede">
+        I build things to understand things.
+      </p>
+
+      <div class="home-grid">
+        <figure class="portrait" data-reveal>
+          <div class="portrait__frame">
+            <canvas data-portrait
+                    data-src="assets/images/portrait/portrait.webp"
+                    data-fallback="portraitFallback"
+                    aria-label="Portrait of Bhaskar redrawn as a field of characters"></canvas>
+            <img id="portraitFallback"
+                 src="assets/images/portrait/portrait.webp"
+                 alt="Portrait of Bhaskar"
+                 width="1600" height="1156"
+                 loading="lazy" decoding="async" hidden>
+          </div>
+          <figcaption class="portrait__caption">
+            <span class="caps caps--dim">Portrait, redrawn as symbols</span>
+            <span class="caps caps--dim">Canvas · adaptive density</span>
+          </figcaption>
+        </figure>
+
+        <div class="home-intro">
+          <p class="lead" data-reveal>
+            This is the working surface of my mind — what I question, what I am
+            learning, what I am experimenting with, and the things I make in
+            order to understand other things. It is quiet on purpose: words and
+            work, in black and silver.
+          </p>
+
+          <section class="currently" aria-label="Currently" data-reveal>
+            <h2 class="block-label">Currently</h2>
+            <dl>
+              <div class="row"><dt>Building</dt><dd>quiet systems — <span class="t">OFF and mythOS, slowly</span></dd></div>
+              <div class="row"><dt>Learning</dt><dd>Japanese, <span class="t">from zero</span></dd></div>
+              <div class="row"><dt>Thinking about</dt><dd>what a quieter internet would look like</dd></div>
+              <div class="row"><dt>Reading</dt><dd>slowly, <span class="t">with a pen</span></dd></div>
+            </dl>
+          </section>
+
+          <section class="page-index" aria-label="Pages" data-reveal style="--d:.15s">
+            <h2 class="block-label">Index</h2>
+            <div class="row">
+              <span class="n caps caps--dim">00</span>
+              <a class="name" href="thinking/index.html">How I think</a>
+              <span class="where caps caps--dim">Notebook</span>
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" preserveAspectRatio="none"><path d="M2 12 H21 M14 5 L21 12 L14 19"/></svg></span>
+            </div>
+            <div class="row">
+              <span class="n caps caps--dim">01</span>
+              <a class="name" href="builds/index.html">What I make</a>
+              <span class="where caps caps--dim">Two, for now</span>
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" preserveAspectRatio="none"><path d="M2 12 H21 M14 5 L21 12 L14 19"/></svg></span>
+            </div>
+            <div class="row">
+              <span class="n caps caps--dim">02</span>
+              <a class="name" href="experiments/index.html">Small experiments</a>
+              <span class="where caps caps--dim">The lab</span>
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" preserveAspectRatio="none"><path d="M2 12 H21 M14 5 L21 12 L14 19"/></svg></span>
+            </div>
+            <div class="row">
+              <span class="n caps caps--dim">03</span>
+              <a class="name" href="about/index.html">Who</a>
+              <span class="where caps caps--dim">Student</span>
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" preserveAspectRatio="none"><path d="M2 12 H21 M14 5 L21 12 L14 19"/></svg></span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <svg class="wave wave--line" data-wave role="presentation" aria-hidden="true"></svg>
+
+    <section class="selected wrap" aria-label="Selected projects">
+      <div class="selected-head">
+        <h2 class="caps caps--silver">Selected builds</h2>
+        <a class="caps u-line" href="builds/index.html" data-sound="whoosh">All builds</a>
+      </div>
+
+      <a class="row" href="builds/off/index.html" data-sound="click">
+        <span class="num mono">01</span>
+        <span class="name">OFF</span>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="tag caps">Private communication</span>
+        <span class="go caps">View<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" preserveAspectRatio="none"><path d="M2 12 H21 M14 5 L21 12 L14 19"/></svg></span></span>
+      </a>
+
+      <a class="row" href="builds/mythos/index.html" data-sound="click">
+        <span class="num mono">02</span>
+        <span class="name">mythOS</span>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="tag caps">The idea of an OS</span>
+        <span class="go caps">View<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" preserveAspectRatio="none"><path d="M2 12 H21 M14 5 L21 12 L14 19"/></svg></span></span>
+      </a>
+    </section>
+
+    <div class="wrap hair"></div>
+
+    <div class="home-end wrap" data-reveal>
+      <p class="line">
+        The best ideas feel small at first, and then they grow quietly.
+        <a class="u-line caps caps--silver" href="thinking/index.html" style="margin-left:12px">Continue into the notebook</a>
+      </p>
+      <span class="sign">B</span>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-row">
+      <span class="caps">© MMXXVI · BHASKAR</span>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="thinking/index.html">Thinking</a>
+        <a href="builds/index.html">Builds</a>
+        <a href="experiments/index.html">Experiments</a>
+        <a href="about/index.html">About</a>
+        <a href="contact/index.html">Contact</a>
+      </nav>
+      <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false" aria-label="Toggle sound">
+        <span class="led" aria-hidden="true"></span><span data-sound-label>SOUND OFF</span>
+      </button>
+    </div>
+    <svg class="wave wave--sm wave--faint wf" data-wave role="presentation" aria-hidden="true"></svg>
+  </footer>
+
+  <script src="js/data/projects.js" defer></script>
+  <script src="js/audio.js" defer></script>
+  <script src="js/transitions.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/waves.js" defer></script>
+  <script src="js/portrait.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
