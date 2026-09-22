@@ -4,6 +4,29 @@
    ============================================================ */
 
 /* ---------- tokens ---------- */
+/* self-hosted subsets (SIL OFL). Space Grotesk variable carries the site's
+   needs at any weight; both IBM Plex Mono faces are exact subsets. */
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../assets/fonts/SpaceGrotesk-Variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../assets/fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../assets/fonts/IBMPlexMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --black:      #060606;
   --ink:        #0b0b0c;
@@ -536,6 +559,27 @@ body.is-arriving .site-foot {
 }
 
 /* home intro column */
+.quote-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line-strong);
+}
+.quote-greek {
+  font-family: var(--font-mono);
+  font-size: clamp(1.35rem, 2.6vw, 1.9rem);
+  font-weight: 400;
+  color: var(--silver);
+  letter-spacing: 0.015em;
+  line-height: 1.2;
+}
+.quote-trans {
+  font-size: 0.64rem;
+  letter-spacing: 0.26em;
+  color: var(--ghost);
+}
 .home-intro .lead {
   font-size: clamp(1.02rem, 1.35vw, 1.22rem);
   line-height: 1.62;
@@ -987,100 +1031,6 @@ body.is-arriving .site-foot {
   letter-spacing: -0.01em;
 }
 .statement .sil { color: var(--silver); }
-
-/* mythos uses a right-floated data block, roman numerals, staggered text */
-.mythos .case-head .name { color: var(--silver-bright); }
-.mythos .section .body-text { max-width: 60ch; }
-.mythos .case-meta-note {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  color: var(--ghost);
-  margin-top: 30px;
-}
-.mythos .roman-watermark {
-  font-family: var(--font-mono);
-  font-size: clamp(5rem, 16vw, 12rem);
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(238, 240, 244, 0.06);
-  line-height: 1;
-  user-select: none;
-}
-
-.case-next { margin-top: var(--section-gap); padding-bottom: 50px; }
-.case-next a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: clamp(24px, 5vh, 40px) 0;
-  border-top: 1px solid var(--line);
-}
-.case-next .lbl { color: var(--ghost); }
-.case-next .nm { font-size: clamp(1.5rem, 4vw, 2.6rem); font-weight: 300; transition: transform 0.4s var(--ease); }
-.case-next a:hover .nm { transform: translateX(8px); color: var(--silver); }
-
-/* ---------- mythOS: a book-like rhythm ---------- */
-.mythos-roman {
-  margin-top: clamp(40px, 9vh, 96px);
-  -webkit-text-stroke: 1px rgba(238, 240, 244, 0.07);
-  color: transparent;
-  font-family: var(--font-mono);
-  font-size: clamp(8rem, 22vw, 20rem);
-  line-height: 0.8;
-  text-align: center;
-  user-select: none;
-}
-
-.m-sections { margin-top: clamp(24px, 5vh, 44px); }
-.m-section {
-  display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  gap: clamp(18px, 3vw, 56px);
-  padding: clamp(38px, 7vh, 72px) 0;
-  border-top: 1px solid var(--line);
-  align-items: baseline;
-}
-.m-section .rom {
-  font-family: var(--font-mono);
-  font-size: clamp(1.6rem, 3vw, 2.6rem);
-  color: var(--silver);
-  padding-top: 2px;
-  transition: color 0.35s ease;
-}
-.m-section:hover .rom { color: var(--silver-bright); }
-.m-section h3 {
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
-  font-weight: 300;
-  letter-spacing: -0.005em;
-  max-width: 24ch;
-  margin-bottom: 18px;
-}
-.m-section .mt { color: var(--fog); font-weight: 300; line-height: 1.72; max-width: 62ch; }
-.m-section .mt strong { color: var(--paper); font-weight: 400; }
-.m-section .mn {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  line-height: 1.9;
-  color: var(--ghost);
-  border-left: 1px solid var(--line-strong);
-  padding-left: 18px;
-  margin-top: 22px;
-  max-width: 56ch;
-}
-/* alternating lanes */
-.m-section--swap {
-  grid-template-columns: minmax(0, 1fr) 110px;
-}
-.m-section--swap .rom { order: 2; text-align: right; }
-.m-section--swap > div { order: 1; }
-
-@media (max-width: 760px) {
-  .m-section,
-  .m-section--swap { grid-template-columns: 1fr; gap: 10px; }
-  .m-section--swap .rom { order: initial; text-align: left; }
-  .m-section .rom { padding-top: 0; }
-}
 
 /* ============================================================
    experiments

@@ -5,8 +5,7 @@ A personal digital space. Multi-page, zero dependencies, deliberately quiet.
 - [index.html](/) — home
 - [thinking/](/thinking/) — a notebook of fragments
 - [builds/](/builds/) — things built
-  - [builds/off/](/builds/off/) — OFF
-  - [builds/mythos/](/builds/mythos/) — mythOS
+  - [builds/off/](/builds/off/) — OFF (the one, original project)
 - [experiments/](/experiments/) — a small laboratory
 - [about/](/about/) — the person
 - [contact/](/contact/) — slow channels only
@@ -57,16 +56,17 @@ tar czf - --exclude=.git --exclude=node_modules . | \
 
 - **Projects** — `js/data/projects.js`. Add a new project by appending one
   object; the builds index reads this file.
-- **Project pages** — the `YEAR / STATUS / ROLE / TECH` fields on
-  `builds/off/index.html` and `builds/mythos/index.html` are marked with the
-  class `ph` (placeholder) and currently say `—`. Replace them with real values
-  when you have them.
-- **Contact** — `contact/index.html` holds three placeholder channels
-  (`[ EMAIL ]`, `[ GITHUB ]`, `[ INSTAGRAM ]`). Put your real handles there;
-  they render as links once an `href` is filled in.
+- **Project pages** — the `YEAR / STATUS / ROLE / TECH` fields and the sidebar
+  notes on `builds/off/index.html` are real and sourced from the OFF repo
+  (github.com/Mythtilla/OFF).
+- **Contact** — `contact/index.html` holds the live channels
+  (`bhaskarz01022011@gmail.com`, `github.com/Mythtilla`, `@bhaskarr_dgaf`).
 - **Thinking** — the fragments, open questions and principles live directly in
   `thinking/index.html`.
 - **Experiments** — rows live in `experiments/index.html`.
+- **Home quote** — the Greek line under the intro is `Γνῶθι σεαυτόν`
+  ("Know thyself"); Greek glyphs fall back to the system's mono font since
+  the self-hosted subsets are ASCII-only.
 
 Nothing behind this site fabricates claims about projects. Where facts are
 missing they stay visibly missing, as placeholders, until replaced.

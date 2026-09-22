@@ -32,7 +32,7 @@
       if (location.protocol === 'file:') return;
       var known = ['/', '/index.html', '/thinking/', '/thinking/index.html',
         '/builds/', '/builds/index.html', '/builds/off/', '/builds/off/index.html',
-        '/builds/mythos/', '/builds/mythos/index.html', '/experiments/', '/experiments/index.html',
+        '/experiments/', '/experiments/index.html',
         '/about/', '/about/index.html', '/contact/', '/contact/index.html', '/404.html'];
       var assets = ['/assets/', '/css/', '/js/'];
       var statics = ['/favicon.svg', '/manifest.webmanifest', '/robots.txt', '/sitemap.xml'];
@@ -108,10 +108,10 @@
       </header>
 
       <dl class="case-data" data-reveal>
-        <div class="cell"><dt>Year</dt><dd class="ph">—</dd></div>
+        <div class="cell"><dt>Year</dt><dd>2026</dd></div>
         <div class="cell"><dt>Status</dt><dd>In progress</dd></div>
-        <div class="cell"><dt>Role</dt><dd class="ph">—</dd></div>
-        <div class="cell"><dt>Tech</dt><dd class="ph">—</dd></div>
+        <div class="cell"><dt>Role</dt><dd>Solo — all of it, for now</dd></div>
+        <div class="cell"><dt>Tech</dt><dd>TypeScript · Vite · Supabase</dd></div>
       </dl>
     </section>
 
@@ -134,8 +134,11 @@
             </p>
           </div>
           <div class="note">
-            PLACEHOLDER — the concrete idea goes here: what it does, who it is
-            for, how it should feel.
+            The concrete shape: a small community platform where you enter with
+            a pseudonym and a password — nothing else required. A seeded public
+            World room, interest rooms, private rooms, and a request-based DM
+            flow. It should feel like a room you borrowed, not a product that
+            borrowed you.
           </div>
         </article>
 
@@ -151,7 +154,10 @@
             </p>
           </div>
           <div class="note">
-            PLACEHOLDER — the real motivation and the story that started it.
+            It started where the frustration was: every serious conversation I
+            have now happens in a room with a landlord. OFF exists to practice
+            the alternative — somewhere the people talking hold the walls, not
+            a company holding the ledger.
           </div>
         </article>
 
@@ -167,8 +173,10 @@
             </p>
           </div>
           <div class="note">
-            PLACEHOLDER — how the problem is framed, who it affects, what is
-            missing from existing answers.
+            Most messaging products optimise for more people talking more
+            often. OFF asks only whether people can talk freely — with trust
+            enforced by the system, not promised by the company. That is the
+            part most existing answers quietly skip.
           </div>
         </article>
 
@@ -177,14 +185,18 @@
           <h3>What has been built so far.</h3>
           <div class="body-text">
             <p>
-              Notes, rough sketches, and the beginning of a shape. The honest
-              answer: this page is ahead of the code. It will catch up as the
-              build happens — in public, as notes, with all the mess kept in.
+              A working first version now exists: rooms, password-only auth,
+              realtime chat, and recovery. This section will keep moving as the
+              build moves — in public, as notes, with all the mess kept in.
             </p>
           </div>
           <div class="note">
-            PLACEHOLDER — architecture, tools, screenshots and progress logs go
-            here when they exist. No fake screenshots will ever be invented.
+            What is real: a Vite + TypeScript client, Supabase for database,
+            auth and realtime, password-only authentication, a two-step
+            onboarding with a recovery phrase, an honest connection indicator,
+            and optimistic messaging inside rooms gatekept by Postgres RLS.
+            The code lives in the open at
+            <a class="u-line" href="https://github.com/Mythtilla/OFF" target="_blank" rel="noopener">github.com/Mythtilla/OFF</a>.
           </div>
         </article>
 
@@ -199,7 +211,10 @@
             </p>
           </div>
           <div class="note">
-            PLACEHOLDER — the open decisions, dated, as they change.
+            Still open: a request-inbox UI, a blocking UI, moderation,
+            invitations, receipts, and account deletion. DMs are currently a
+            request flow, not open to anyone. End-to-end encryption has a design
+            document and a roadmap — it is not shipped yet, and says so.
           </div>
         </article>
 
@@ -214,8 +229,13 @@
             </p>
           </div>
           <div class="note">
-            PLACEHOLDER — threat model, encryption choices, how the system fails,
-            without who or what is protected.
+            The threat model is written into the repo: the client carries only
+            a publishable key, with no service-role path. Postgres RLS is the
+            authority and is never disabled; sensitive writes go through
+            security-definer RPCs that reject unauthenticated callers. No
+            analytics, no fingerprinting, no IP reads. Account recovery stores
+            only a one-way bcrypt verifier of the recovery phrase, and resets
+            revoke every session.
           </div>
         </article>
 
@@ -224,13 +244,17 @@
           <h3>Where it stands now.</h3>
           <div class="body-text">
             <p>
-              In progress, on paper, honest. The next entries in this section
-              will be about sockets and bytes and, eventually, silence. Until
-              then, the dashes above stay dashes.
+              In progress, and honest. The next entries in this section will be
+              about moderation, an inbox, and accounts that can leave. Until
+              then, what is missing says so visibly.
             </p>
           </div>
           <div class="note">
-            PLACEHOLDER — current state, next steps, links, repositories.
+            In progress, and running code, not paper: pseudonymous sign-in, the
+            seeded World room, optimistic chat, and recovery all work. Next on
+            the shelf: moderation, an inbox, account deletion, and the E2EE
+            roadmap. Progress lands publicly in
+            <a class="u-line" href="https://github.com/Mythtilla/OFF" target="_blank" rel="noopener">github.com/Mythtilla/OFF</a>.
           </div>
         </article>
       </div>
@@ -242,19 +266,10 @@
 
     <section class="build-note wrap" data-reveal>
       <p>
-        EVERY DASH ON THIS PAGE IS AN EDITABLE PLACEHOLDER — YEAR, ROLE, TECH,
-        AND THE NOTES BESIDE EACH SECTION ARE THERE TO BE REPLACED WITH REAL
-        FACTS AS THEY EXIST. THE PROJECT IS SHOWN AS IT IS, NOT AS IT LOOKS WHEN
-        FINISHED.
+        THIS PROJECT BELONGS TO NO ONE'S LEDGER. EVERY FIELD ABOVE IS REAL OR
+        MARKED AS NOT REAL YET — NOTHING HERE IS INVENTED.
       </p>
     </section>
-
-    <nav class="case-next wrap" aria-label="Next project">
-      <a href="../mythos/index.html" data-sound="whoosh">
-        <span class="caps caps--dim lbl">Next project</span>
-        <span class="nm">mythOS <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" style="width:.5em;height:.5em" preserveAspectRatio="none"><path d="M2 12 H21 M14 5 L21 12 L14 19"/></svg></span></span>
-      </a>
-    </nav>
   </main>
 
   <footer class="site-foot">
