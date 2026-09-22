@@ -962,7 +962,6 @@ body.is-arriving .site-foot {
   margin-bottom: 10px;
 }
 .case-data .cell dd { margin: 0; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; color: var(--paper); }
-.case-data .cell dd.ph { color: var(--silver-dim); }
 
 .case-body {
   display: grid;
