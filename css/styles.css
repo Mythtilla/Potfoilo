@@ -507,7 +507,7 @@ body.is-arriving .site-foot {
 .portrait__frame {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1600 / 1156;
+  aspect-ratio: 1156 / 1600;
   background:
     radial-gradient(120% 120% at 80% -20%, rgba(238, 240, 244, 0.06), transparent 55%),
     var(--charcoal);
